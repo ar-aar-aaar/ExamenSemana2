@@ -6,38 +6,37 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
     
 
-    <changeSet author="AZ" id="addForeignKeyConstraint-userdireccion">
-        <addForeignKeyConstraint baseColumnNames="iddireccion"
-                baseTableName="user"
-                constraintName="fk_user_direccion"
-                referencedColumnNames="iddireccion"
-                referencedTableName="direccion"/>
+    <changeSet author="AZ" id="addForeignKeyConstraint-GenreSong">
+        <addForeignKeyConstraint baseColumnNames="idgenre"
+                baseTableName="song"
+                constraintName="fk_genre_song"
+                referencedColumnNames="idgenre"
+                referencedTableName="genre"/>
     </changeSet>
 
-    <changeSet author="AZ" id="addForeignKeyConstraint-userusertype">
-        <addForeignKeyConstraint baseColumnNames="iduser"
-                baseTableName="user"
-                constraintName="fk_user_usertype"
-                referencedColumnNames="p_iduser"
-                referencedTableName="usertype"/>
+    <changeSet author="AZ" id="addForeignKeyConstraint-artist_artistsong">
+        <addForeignKeyConstraint baseColumnNames="idartist"
+                baseTableName="artistsongalbum"
+                constraintName="fk_artist_artistsong"
+                referencedColumnNames="idartist"
+                referencedTableName="artist"/>
     </changeSet>
 
-    <changeSet author="AZ" id="addForeignKeyConstraint-user1">
-        <addForeignKeyConstraint baseColumnNames="idusertype"
-                baseTableName="permiso_usertype"
-                constraintName="fk_ut_permiso"
-                referencedColumnNames="idusertype"
-                referencedTableName="usertype"/>
+    <changeSet author="AZ" id="addForeignKeyConstraint-song_artistsong">
+        <addForeignKeyConstraint baseColumnNames="idsong"
+                baseTableName="artistsongalbum"
+                constraintName="fk_song_artistsong"
+                referencedColumnNames="idsong"
+                referencedTableName="song"/>
     </changeSet>
 
-    <changeSet author="AZ" id="addForeignKeyConstraint-algo">
-        <addForeignKeyConstraint baseColumnNames="idpermiso"
-                baseTableName="permiso_usertype"
-                constraintName="fk_permiso_ut"
-                referencedColumnNames="idpermiso"
-                referencedTableName="permiso"/>
+    <changeSet author="AZ" id="addForeignKeyConstraint-album_artistsong">
+        <addForeignKeyConstraint baseColumnNames="idalbum"
+                baseTableName="artistsongalbum"
+                constraintName="fk_album_artistsong"
+                referencedColumnNames="idalbum"
+                referencedTableName="album"/>
     </changeSet>
-    
 
     
 

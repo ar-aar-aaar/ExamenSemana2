@@ -5,8 +5,8 @@
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
     <changeSet author="aAZ" id="20190228-ArtistTable">
-        <createTable tableName="artista">
-            <column name="idartista" type="int">
+        <createTable tableName="artist">
+            <column name="idartist" type="int">
                 <constraints nullable="true" primaryKey="true" unique="true"/>
             </column>
             <column name="name" type="VARCHAR(50)">
@@ -44,23 +44,32 @@
     </changeSet>
 
     <changeSet author="AZ" id="20190228-SongTable">
-        <createTable tableName="artista">
-            <column name="idartista" type="int">
+        <createTable tableName="song">
+            <column name="idsong" type="int">
                 <constraints nullable="true" primaryKey="true" unique="true"/>
             </column>
             <column name="name" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="duration" type="int">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="idgenre" type="int">
                 <constraints nullable="true" primaryKey="false" unique="false"/>
             </column>
         </createTable>
     </changeSet>
 
-    <changeSet author="AZ" id="20190228-ArtistAlbumTable">
-        <createTable tableName="artista">
-            <column name="idartista" type="int">
+    <changeSet author="AZ" id="20190228-ArtistSongTable">
+        <createTable tableName="artistsongalbum">
+            <column name="idartist" type="int">
                 <constraints nullable="true" primaryKey="true" unique="true"/>
             </column>
-            <column name="name" type="VARCHAR(50)">
-                <constraints nullable="true" primaryKey="false" unique="false"/>
+            <column name="idsong" type="int">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
+            </column>
+            <column name="idalbum" type="int">
+                <constraints nullable="true" primaryKey="true" unique="false"/>
             </column>
         </createTable> 
     </changeSet>
