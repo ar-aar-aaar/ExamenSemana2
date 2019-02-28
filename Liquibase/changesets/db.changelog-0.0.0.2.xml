@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+    
+
+    <changeSet author="AZ" id="addForeignKeyConstraint-userdireccion">
+        <addForeignKeyConstraint baseColumnNames="iddireccion"
+                baseTableName="user"
+                constraintName="fk_user_direccion"
+                referencedColumnNames="iddireccion"
+                referencedTableName="direccion"/>
+    </changeSet>
+
+    <changeSet author="AZ" id="addForeignKeyConstraint-userusertype">
+        <addForeignKeyConstraint baseColumnNames="iduser"
+                baseTableName="user"
+                constraintName="fk_user_usertype"
+                referencedColumnNames="p_iduser"
+                referencedTableName="usertype"/>
+    </changeSet>
+
+    <changeSet author="AZ" id="addForeignKeyConstraint-user1">
+        <addForeignKeyConstraint baseColumnNames="idusertype"
+                baseTableName="permiso_usertype"
+                constraintName="fk_ut_permiso"
+                referencedColumnNames="idusertype"
+                referencedTableName="usertype"/>
+    </changeSet>
+
+    <changeSet author="AZ" id="addForeignKeyConstraint-algo">
+        <addForeignKeyConstraint baseColumnNames="idpermiso"
+                baseTableName="permiso_usertype"
+                constraintName="fk_permiso_ut"
+                referencedColumnNames="idpermiso"
+                referencedTableName="permiso"/>
+    </changeSet>
+    
+
+    
+
+</databaseChangeLog>

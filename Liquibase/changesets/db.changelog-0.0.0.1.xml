@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+    <changeSet author="aAZ" id="20190228-ArtistTable">
+        <createTable tableName="artista">
+            <column name="idartista" type="int">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="AZ" id="20190228-AlbumTable">
+        <createTable tableName="album">
+            <column name="idalbum" type="int">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="year" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="AZ" id="20190228-GenreTable">
+        <createTable tableName="genre">
+            <column name="idgenre" type="int">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+            <column name="description" type="VARCHAR(500)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="AZ" id="20190228-SongTable">
+        <createTable tableName="artista">
+            <column name="idartista" type="int">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="AZ" id="20190228-ArtistAlbumTable">
+        <createTable tableName="artista">
+            <column name="idartista" type="int">
+                <constraints nullable="true" primaryKey="true" unique="true"/>
+            </column>
+            <column name="name" type="VARCHAR(50)">
+                <constraints nullable="true" primaryKey="false" unique="false"/>
+            </column>
+        </createTable> 
+    </changeSet>
+
+</databaseChangeLog> 
