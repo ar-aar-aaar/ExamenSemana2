@@ -10,7 +10,7 @@ Este patrón nos permite pasar peticiones a través de una cadena de receptores.
 
 En este caso se va a mandar la peticion de que quiero saber si cada uno de los receptores ya pagaron, se crea una cadena de los diferentes servicios de streaming.
 
-[!alt text](https://refactoring.guru/images/patterns/diagrams/chain-of-responsibility/structure.png)
+![alt text](https://refactoring.guru/images/patterns/diagrams/chain-of-responsibility/structure.png)
 
 ### 1 Handler
 El handler será StreamingService que tendrá su método handle, y el método setNext para mandar al siguiente en la lista.
